@@ -1,0 +1,21 @@
+
+# Building the container from Dockerfile
+$ sudo docker build . 
+
+# Building the image from docker-compose.yml
+$ sudo docker-compose build
+
+# Creating the Django app after created an empty folder named app
+$ sudo docker-compose run app sh -c "django-admin.py startproject app ."
+
+
+# Run the tests with docker-compose
+$ sudo docker-compose run app sh -c "python manage.py test"
+
+# addes flake8 manually to the requirements.txt then ran:
+$ sudo docker-compose build
+then the command below to run the tests and also the linting at once/together:
+$ sudo docker-compose run app sh -c "python manage.py test && flake8"
+
+# Run after create and implement the custom model
+$ sudo docker-compose run app sh -c "python manage.py makemigrations core"
