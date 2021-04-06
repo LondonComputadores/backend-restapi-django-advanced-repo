@@ -1,3 +1,6 @@
+
+- Started with the test_models then test_admin...
+
 - Modules calc.py and tests.py has been removed from the our first django app created
 just before we create the core app 
 
@@ -9,4 +12,4 @@ $ sudo docker-compose run app sh -c "python manage.py startapp core"
 - Add this AUTH_USER_MODEL = 'core.User' at the end of settings.py then run the
 makemigrations cmd... to implement the custom model 
 
-- 
+- ... 
